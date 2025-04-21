@@ -129,115 +129,138 @@ proxy-groups:
     include-all: true
     type: url-test
     interval: 300
+    url: http://www.gstatic.com/generate_204
   - name: ALL SELECT
     include-all: true
     type: select
     interval: 300
+    url: http://www.gstatic.com/generate_204
   - include-all: true
     filter: "(?i)新加坡"
     name: "\U0001F1F8\U0001F1EC新加坡 AUTO"
     type: url-test
     interval: 300
+    url: http://www.gstatic.com/generate_204
   - include-all: true
     filter: "(?i)韩国"
     name: "\U0001F1F0\U0001F1F7韩国 AUTO"
     type: url-test
     interval: 300
+    url: http://www.gstatic.com/generate_204
   - include-all: true
     filter: "(?i)日本"
     name: "\U0001F1EF\U0001F1F5日本 AUTO"
     type: url-test
     interval: 300
+    url: http://www.gstatic.com/generate_204
   - include-all: true
     filter: "(?i)美国"
     name: "\U0001F1FA\U0001F1F8美国 AUTO"
     type: url-test
     interval: 300
+    url: http://www.gstatic.com/generate_204
   - include-all: true
     filter: "(?i)香港"
     name: "\U0001F1ED\U0001F1F0香港 AUTO"
     type: url-test
     interval: 300
+    url: http://www.gstatic.com/generate_204
   - include-all: true
     filter: "(?i)英国"
     name: "\U0001F1EC\U0001F1E7英国 AUTO"
     type: url-test
     interval: 300
+    url: http://www.gstatic.com/generate_204
   - include-all: true
     filter: "(?i)法国"
     name: "\U0001F1EB\U0001F1F7法国 AUTO"
     type: url-test
     interval: 300
+    url: http://www.gstatic.com/generate_204
   - include-all: true
     filter: "(?i)瑞士"
     name: "\U0001F1E8\U0001F1ED瑞士 AUTO"
     type: url-test
     interval: 300
+    url: http://www.gstatic.com/generate_204
   - include-all: true
     filter: "(?i)德国"
     name: "\U0001F1E9\U0001F1EA德国 AUTO"
     type: url-test
     interval: 300
+    url: http://www.gstatic.com/generate_204
   - include-all: true
     filter: "(?i)澳大利亚"
     name: "\U0001F1E6\U0001F1FA澳大利亚 AUTO"
     type: url-test
     interval: 300
+    url: http://www.gstatic.com/generate_204
   - include-all: true
     filter: "(?i)荷兰"
     name: "\U0001F1F3\U0001F1F1荷兰 AUTO"
     type: url-test
     interval: 300
+    url: http://www.gstatic.com/generate_204
   - include-all: true
     filter: "(?i)加拿大"
     name: "\U0001F1E8\U0001F1E6加拿大 AUTO"
     type: url-test
     interval: 300
+    url: http://www.gstatic.com/generate_204
   - include-all: true
     filter: "(?i)芬兰"
     name: "\U0001F1EB\U0001F1EE芬兰 AUTO"
     type: url-test
     interval: 300
+    url: http://www.gstatic.com/generate_204
   - include-all: true
     filter: "(?i)巴西"
     name: "\U0001F1E7\U0001F1F7巴西 AUTO"
     type: url-test
     interval: 300
+    url: http://www.gstatic.com/generate_204
   - include-all: true
     filter: "(?i)意大利"
     name: "\U0001F1EE\U0001F1F9意大利 AUTO"
     type: url-test
     interval: 300
+    url: http://www.gstatic.com/generate_204
   - include-all: true
     filter: "(?i)俄罗斯"
     name: "\U0001F1F7\U0001F1FA俄罗斯 AUTO"
     type: url-test
     interval: 300
+    url: http://www.gstatic.com/generate_204
   - include-all: true
     filter: "(?i)台湾"
     name: "\U0001F1F9\U0001F1FC台湾 AUTO"
     type: url-test
     interval: 300
+    url: http://www.gstatic.com/generate_204
   - include-all: true
     filter: "(?i)印度"
     name: "\U0001F1EE\U0001F1F3印度 AUTO"
     type: url-test
     interval: 300
+    url: http://www.gstatic.com/generate_204
   - include-all: true
     filter: "(?i)阿拉伯酋长国"
     name: "\U0001F1E6\U0001F1EA阿拉伯酋长国 AUTO"
     type: url-test
     interval: 300
+    url: http://www.gstatic.com/generate_204
   - include-all: true
     filter: "(?i)乌克兰"
     name: "\U0001F1FA\U0001F1E6乌克兰 AUTO"
     type: url-test
     interval: 300
+    url: http://www.gstatic.com/generate_204
   - include-all: true
     filter: "(?i)其他"
     name: 其他 AUTO
     type: url-test
     interval: 300
+    url: http://www.gstatic.com/generate_204
   - name: GLOBAL
     proxies:
       - PROXY
