@@ -1,0 +1,278 @@
+rule-providers:
+  private:
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/private.yaml
+    path: ./ruleset/private.yaml
+    behavior: domain
+    interval: 86400
+    format: yaml
+    type: http
+  cn_domain:
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cn.yaml
+    path: ./ruleset/cn_domain.yaml
+    behavior: domain
+    interval: 86400
+    format: yaml
+    type: http
+  telegram_domain:
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/telegram.yaml
+    path: ./ruleset/telegram_domain.yaml
+    behavior: domain
+    interval: 86400
+    format: yaml
+    type: http
+  google_domain:
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google.yaml
+    path: ./ruleset/google_domain.yaml
+    behavior: domain
+    interval: 86400
+    format: yaml
+    type: http
+  geolocation-!cn:
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/geolocation-!cn.yaml
+    path: ./ruleset/geolocation-!cn.yaml
+    behavior: domain
+    interval: 86400
+    format: yaml
+    type: http
+  cn_ip:
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/cn.yaml
+    path: ./ruleset/cn_ip.yaml
+    behavior: ipcidr
+    interval: 86400
+    format: yaml
+    type: http
+  telegram_ip:
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/telegram.yaml
+    path: ./ruleset/telegram_ip.yaml
+    behavior: ipcidr
+    interval: 86400
+    format: yaml
+    type: http
+  google_ip:
+    url: https://testingcf.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/google.yaml
+    path: ./ruleset/google_ip.yaml
+    behavior: ipcidr
+    interval: 86400
+    format: yaml
+    type: http
+  bing:
+    url: https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Bing/Bing.yaml
+    path: ./ruleset/bing.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  copilot:
+    url: https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Copilot/Copilot.yaml
+    path: ./ruleset/copilot.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  claude:
+    url: https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Claude/Claude.yaml
+    path: ./ruleset/claude.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  bard:
+    url: https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BardAI/BardAI.yaml
+    path: ./ruleset/bard.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  openai:
+    url: https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml
+    path: ./ruleset/openai.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+  steam:
+    url: https://testingcf.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Steam/Steam.yaml
+    path: ./ruleset/steam.yaml
+    behavior: classical
+    interval: 86400
+    format: yaml
+    type: http
+
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - SELF SELECT
+      - SELF AUTO
+      - AUTO
+      - ALL SELECT
+      - "\U0001F1F8\U0001F1EC新加坡 AUTO"
+      - "\U0001F1F0\U0001F1F7韩国 AUTO"
+      - "\U0001F1EF\U0001F1F5日本 AUTO"
+      - "\U0001F1FA\U0001F1F8美国 AUTO"
+      - "\U0001F1ED\U0001F1F0香港 AUTO"
+      - "\U0001F1EC\U0001F1E7英国 AUTO"
+      - "\U0001F1EB\U0001F1F7法国 AUTO"
+      - "\U0001F1E8\U0001F1ED瑞士 AUTO"
+      - "\U0001F1E9\U0001F1EA德国 AUTO"
+      - "\U0001F1E6\U0001F1FA澳大利亚 AUTO"
+      - "\U0001F1F3\U0001F1F1荷兰 AUTO"
+      - "\U0001F1E8\U0001F1E6加拿大 AUTO"
+      - "\U0001F1EB\U0001F1EE芬兰 AUTO"
+      - "\U0001F1E7\U0001F1F7巴西 AUTO"
+      - "\U0001F1EE\U0001F1F9意大利 AUTO"
+      - "\U0001F1F7\U0001F1FA俄罗斯 AUTO"
+      - "\U0001F1F9\U0001F1FC台湾 AUTO"
+      - "\U0001F1EE\U0001F1F3印度 AUTO"
+      - "\U0001F1E6\U0001F1EA阿拉伯酋长国 AUTO"
+      - "\U0001F1FA\U0001F1E6乌克兰 AUTO"
+      - 其他 AUTO
+      
+  - name: SELF SELECT
+    type: select
+    proxies:
+      - self_vless_reality|mhW2.love@xray.com
+      - self_trojan
+      - self_vmess
+      - self_vless_tls
+      - DIRECT
+
+  - name: SELF AUTO
+    type: url-test
+    proxies:
+      - self_vless_reality|mhW2.love@xray.com
+      - self_trojan
+      - self_vmess
+      - self_vless_tls
+    url: http://cp.cloudflare.com/generate_204
+    interval: 300
+  - name: AUTO
+    include-all: true
+    exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
+    type: url-test
+    interval: 300
+  - name: ALL SELECT
+    include-all: true
+    type: select
+    interval: 300
+  - include-all: true
+    filter: "(?i)新加坡"
+    name: "\U0001F1F8\U0001F1EC新加坡 AUTO"
+    type: url-test
+    interval: 300
+  - include-all: true
+    filter: "(?i)韩国"
+    name: "\U0001F1F0\U0001F1F7韩国 AUTO"
+    type: url-test
+    interval: 300
+  - include-all: true
+    filter: "(?i)日本"
+    name: "\U0001F1EF\U0001F1F5日本 AUTO"
+    type: url-test
+    interval: 300
+  - include-all: true
+    filter: "(?i)美国"
+    name: "\U0001F1FA\U0001F1F8美国 AUTO"
+    type: url-test
+    interval: 300
+  - include-all: true
+    filter: "(?i)香港"
+    name: "\U0001F1ED\U0001F1F0香港 AUTO"
+    type: url-test
+    interval: 300
+  - include-all: true
+    filter: "(?i)英国"
+    name: "\U0001F1EC\U0001F1E7英国 AUTO"
+    type: url-test
+    interval: 300
+  - include-all: true
+    filter: "(?i)法国"
+    name: "\U0001F1EB\U0001F1F7法国 AUTO"
+    type: url-test
+    interval: 300
+  - include-all: true
+    filter: "(?i)瑞士"
+    name: "\U0001F1E8\U0001F1ED瑞士 AUTO"
+    type: url-test
+    interval: 300
+  - include-all: true
+    filter: "(?i)德国"
+    name: "\U0001F1E9\U0001F1EA德国 AUTO"
+    type: url-test
+    interval: 300
+  - include-all: true
+    filter: "(?i)澳大利亚"
+    name: "\U0001F1E6\U0001F1FA澳大利亚 AUTO"
+    type: url-test
+    interval: 300
+  - include-all: true
+    filter: "(?i)荷兰"
+    name: "\U0001F1F3\U0001F1F1荷兰 AUTO"
+    type: url-test
+    interval: 300
+  - include-all: true
+    filter: "(?i)加拿大"
+    name: "\U0001F1E8\U0001F1E6加拿大 AUTO"
+    type: url-test
+    interval: 300
+  - include-all: true
+    filter: "(?i)芬兰"
+    name: "\U0001F1EB\U0001F1EE芬兰 AUTO"
+    type: url-test
+    interval: 300
+  - include-all: true
+    filter: "(?i)巴西"
+    name: "\U0001F1E7\U0001F1F7巴西 AUTO"
+    type: url-test
+    interval: 300
+  - include-all: true
+    filter: "(?i)意大利"
+    name: "\U0001F1EE\U0001F1F9意大利 AUTO"
+    type: url-test
+    interval: 300
+  - include-all: true
+    filter: "(?i)俄罗斯"
+    name: "\U0001F1F7\U0001F1FA俄罗斯 AUTO"
+    type: url-test
+    interval: 300
+  - include-all: true
+    filter: "(?i)台湾"
+    name: "\U0001F1F9\U0001F1FC台湾 AUTO"
+    type: url-test
+    interval: 300
+  - include-all: true
+    filter: "(?i)印度"
+    name: "\U0001F1EE\U0001F1F3印度 AUTO"
+    type: url-test
+    interval: 300
+  - include-all: true
+    filter: "(?i)阿拉伯酋长国"
+    name: "\U0001F1E6\U0001F1EA阿拉伯酋长国 AUTO"
+    type: url-test
+    interval: 300
+  - include-all: true
+    filter: "(?i)乌克兰"
+    name: "\U0001F1FA\U0001F1E6乌克兰 AUTO"
+    type: url-test
+    interval: 300
+  - include-all: true
+    filter: "(?i)其他"
+    name: 其他 AUTO
+    type: url-test
+    interval: 300
+  - name: GLOBAL
+    proxies:
+      - PROXY
+      - ALL SELECT
+    type: select
+
+rules:
+  - 'PROCESS-NAME,subs-check.exe,DIRECT'
+  - 'PROCESS-NAME,subs-check,DIRECT'
+  - 'RULE-SET,private,DIRECT'
+  - 'RULE-SET,geolocation-!cn,PROXY'
+  - 'RULE-SET,cn_domain,DIRECT'
+  - 'RULE-SET,cn_ip,DIRECT'
+  - 'MATCH,PROXY'
+
+
