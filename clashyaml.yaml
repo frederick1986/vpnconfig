@@ -245,12 +245,22 @@ proxy-groups:
     type: select
 
 rules:
-  - 'PROCESS-NAME,subs-check.exe,DIRECT'
-  - 'PROCESS-NAME,subs-check,DIRECT'
-  - 'RULE-SET,private,DIRECT'
-  - 'RULE-SET,geolocation-!cn,PROXY'
-  - 'RULE-SET,cn_domain,DIRECT'
-  - 'RULE-SET,cn_ip,DIRECT'
-  - 'MATCH,PROXY'
+  - "PROCESS-NAME,subs-check.exe,DIRECT"
+  - "PROCESS-NAME,subs-check,DIRECT"
+  - "RULE-SET,private,DIRECT"
+  - "RULE-SET,bing,PROXY"
+  - "RULE-SET,copilot,PROXY"
+  - "RULE-SET,bard,PROXY"
+  - "RULE-SET,openai,PROXY"
+  - "RULE-SET,claude,PROXY"
+  - "RULE-SET,steam,PROXY"
+  - "RULE-SET,telegram_domain,PROXY"
+  - "RULE-SET,telegram_ip,PROXY"
+  - "RULE-SET,google_domain,PROXY"
+  - "RULE-SET,google_ip,PROXY"
+  - "RULE-SET,geolocation-!cn,PROXY"
+  - "RULE-SET,cn_domain,DIRECT"
+  - "RULE-SET,cn_ip,DIRECT"
+  - "MATCH,PROXY"
 
 
