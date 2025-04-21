@@ -102,9 +102,7 @@ proxy-groups:
   - name: PROXY
     type: select
     proxies:
-      - SELF SELECT
-      - SELF AUTO
-      - AUTO
+      - ALL AUTO
       - ALL SELECT
       - "\U0001F1F8\U0001F1EC新加坡 AUTO"
       - "\U0001F1F0\U0001F1F7韩国 AUTO"
@@ -127,26 +125,7 @@ proxy-groups:
       - "\U0001F1E6\U0001F1EA阿拉伯酋长国 AUTO"
       - "\U0001F1FA\U0001F1E6乌克兰 AUTO"
       - 其他 AUTO
-      
-  - name: SELF SELECT
-    type: select
-    proxies:
-      - self_vless_reality|mhW2.love@xray.com
-      - self_trojan
-      - self_vmess
-      - self_vless_tls
-      - DIRECT
-
-  - name: SELF AUTO
-    type: url-test
-    proxies:
-      - self_vless_reality|mhW2.love@xray.com
-      - self_trojan
-      - self_vmess
-      - self_vless_tls
-    url: http://cp.cloudflare.com/generate_204
-    interval: 300
-  - name: AUTO
+  - name: ALL AUTO
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置
     type: url-test
